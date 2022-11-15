@@ -46,7 +46,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <Link className="normal-case text-xl flex justify-center items-center">
+          <Link to="/" className="normal-case text-xl flex justify-center items-center">
             <img className="w-12" src={logo} alt="" />
             Dr. Portal
             </Link>
@@ -54,19 +54,19 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <Link>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link>About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link>Appointment</Link>
+              <Link to="appointment">Appointment</Link>
             </li>
             <li>
-              <Link>Review</Link>
+              <Link to="review">Review</Link>
             </li>
             <li>
-              <Link>Contact Us</Link>
+              <Link to="contact">Contact Us</Link>
             </li>
           </ul>
         </div>
