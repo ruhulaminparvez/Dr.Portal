@@ -6,6 +6,8 @@ import Appointment from './../../Pages/Appointment/Appointment';
 import Review from './../../Pages/Review/Review';
 import Contact from './../../Pages/Contact/Contact';
 import Error from './../../Pages/Error/Error';
+import LogIn from './../../Pages/LogIn/LogIn';
+import Registration from './../../Pages/Registration/Registration';
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
         {
             path: "/contact",
             element: <Contact />
+        },
+        {
+            path: "/login",
+            element: <LogIn />
+        },
+        {
+            path: "/registration",
+            element: <Registration />
         },
         {
             path: "*",
