@@ -9,7 +9,7 @@ const Hero = () => {
           <img
             src={bannerImg}
             alt="hero"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm object-cover rounded-lg shadow-2xl"
           />
           <div>
             <h1 className="text-4xl font-bold lg:w-80">Your New Smile Starts Here</h1>

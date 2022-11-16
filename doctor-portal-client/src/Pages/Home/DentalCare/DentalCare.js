@@ -7,7 +7,7 @@ const DentalCare = () => {
       <div className="hero-content flex-col lg:flex-row justify-between">
         <img
           src={treatment}
-          className="max-w-sm rounded-lg shadow-2xl"
+          className="max-w-sm object-cover rounded-lg shadow-2xl"
           alt=""
         />
         <div className="px-12">
