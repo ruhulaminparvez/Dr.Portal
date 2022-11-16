@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Registration = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200" data-theme="corporate">
+      <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left mb-5">
             <h1 className="text-5xl font-bold">Registration</h1>

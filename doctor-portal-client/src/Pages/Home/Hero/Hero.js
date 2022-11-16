@@ -1,12 +1,13 @@
 import React from "react";
+import bannerImg from "../../../Assets/images/chair.png";
 
 const Hero = () => {
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero bg-base-200">
+        <div className="hero-content flex-col lg:flex-row-reverse justify-between mt-5">
           <img
-            src="https://placeimg.com/260/400/arch"
+            src={bannerImg}
             alt="hero"
             className="max-w-sm rounded-lg shadow-2xl"
           />
@@ -17,7 +18,7 @@ const Hero = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary text-white">Get Started</button>
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@ const Footer = () => {
     <div>
       <footer
         className="footer footer-center p-10 bg-primary text-primary-content"
-        data-theme="corporate"
       >
         <div>
           <img className="w-24" src={logo} alt="" />

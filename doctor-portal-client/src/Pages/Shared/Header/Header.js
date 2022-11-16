@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100 px-16" data-theme="corporate">
+      <div className="navbar bg-base-100 lg:px-52">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -66,7 +66,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login" className="btn">
+          <Link to="/login" className="btn btn-primary text-white">
             LogIn
           </Link>
         </div>
