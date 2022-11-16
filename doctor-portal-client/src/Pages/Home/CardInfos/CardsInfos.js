@@ -11,26 +11,26 @@ const CardsInfos = () => {
       title: "Opening Hours",
       description: "Opening Hours 9:00 AM - 10:00 PM",
       img: clock,
-      background: "bg-primary",
+      background: "bg-gradient-to-r from-cyan-500 to-blue-500",
     },
     {
       id: 2,
       title: "Visit Our Location",
       description: "Brooklyn, NY 10036, United States",
       img: marker,
-      background: "bg-primary",
+      background: "bg-gradient-to-r from-cyan-500 to-blue-500",
     },
     {
       id: 3,
       title: "Contact Us Now",
       description: "+15697854124",
       img: phone,
-      background: "bg-primary",
+      background: "bg-gradient-to-r from-cyan-500 to-blue-500",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:px-52 my-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:px-52 mt-6">
       {cardInfo.map((info) => (
         <CardInfo key={info.id} info={info}></CardInfo>
       ))}

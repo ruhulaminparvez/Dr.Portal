@@ -18,7 +18,7 @@ const Hero = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary text-white">Get Started</button>
+            <button className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Get Started</button>
           </div>
         </div>
       </div>
