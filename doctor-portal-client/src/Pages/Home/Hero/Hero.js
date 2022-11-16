@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
       <div className="hero bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse justify-between mt-5">
+        <div className="hero-content flex-col lg:flex-row-reverse justify-between mt-10">
           <img
             src={bannerImg}
             alt="hero"
