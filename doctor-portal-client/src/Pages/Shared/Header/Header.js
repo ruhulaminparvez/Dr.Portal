@@ -1,9 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo  from "../../../Assets/logos/logo-2.png";
+import logo from "../../../Assets/logos/logo-2.png";
 // import logo2  from "../../../Assets/logos/logo-2.png";
 
 const Header = () => {
+  const menuItems = (
+    <React.Fragment>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <li>
+        <Link to="appointment">Appointment</Link>
+      </li>
+      <li>
+        <Link to="review">Review</Link>
+      </li>
+      <li>
+        <Link to="contact">Contact Us</Link>
+      </li>
+    </React.Fragment>
+  );
+
   return (
     <div>
       <div className="navbar bg-base-100 px-16" data-theme="corporate">
@@ -29,49 +49,26 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <Link>Home</Link>
-              </li>
-              <li>
-                <Link>About</Link>
-              </li>
-              <li>
-                <Link>Appointment</Link>
-              </li>
-              <li>
-                <Link>Review</Link>
-              </li>
-              <li>
-                <Link>Contact Us</Link>
-              </li>
+              {menuItems}
             </ul>
           </div>
-          <Link to="/" className="normal-case text-xl flex justify-center items-center">
+          <Link
+            to="/"
+            className="normal-case text-xl flex justify-center items-center"
+          >
             <img className="w-12" src={logo} alt="" />
             Dr. Portal
-            </Link>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="appointment">Appointment</Link>
-            </li>
-            <li>
-              <Link to="review">Review</Link>
-            </li>
-            <li>
-              <Link to="contact">Contact Us</Link>
-            </li>
+            {menuItems}
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login" className="btn">LogIn</Link>
+          <Link to="/login" className="btn">
+            LogIn
+          </Link>
         </div>
       </div>
     </div>
