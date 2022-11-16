@@ -30,7 +30,7 @@ const CardsInfos = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 lg:px-52 mt-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:px-52 mt-6">
       {cardInfo.map((info) => (
         <CardInfo key={info.id} info={info}></CardInfo>
       ))}

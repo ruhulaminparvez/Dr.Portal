@@ -12,11 +12,10 @@ const Hero = () => {
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6 w-96">
+            <h1 className="text-4xl font-bold lg:w-80">Your New Smile Starts Here</h1>
+            <p className="py-3 lg:w-96">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              excepturi exercitationem quasi.
             </p>
             <button className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Get Started</button>
           </div>

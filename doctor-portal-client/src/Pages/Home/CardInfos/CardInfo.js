@@ -4,7 +4,7 @@ const CardInfo = ({ info }) => {
   const { title, description, img, background } = info;
   console.log(info);
   return (
-    <div className={`card card-side ${background} shadow-xl p-4 text-white`}>
+    <div className={`card md:card-side lg:card-side ${background} shadow-xl p-4 text-white`}>
       <figure>
         <img src={img} alt="" />
       </figure>

@@ -37,7 +37,7 @@ const Services = () => {
       </h5>
       <h1 className="text-center text-3xl">Services We Provide</h1>
       <div className="flex justify-evenly items-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 my-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5">
             {
                 serviceCardInfo.map(cardData => <ServiceCard key={cardData.id} cardData={cardData}></ServiceCard>)
             }
