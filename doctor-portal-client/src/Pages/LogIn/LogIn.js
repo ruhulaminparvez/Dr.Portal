@@ -19,6 +19,7 @@ const LogIn = () => {
                   type="text"
                   placeholder="email"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -26,11 +27,12 @@ const LogIn = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="text"
+                  type="password"
                   placeholder="password"
                   className="input input-bordered"
+                  required
                 />
-                <label className="label mt-2">
+                <label className="label text-center mt-2">
                     <p className="label-text-alt">Not Registered Yet? Go for &nbsp;
                   <Link to="/registration" className="label-text-alt link link-hover">
                     Registration
