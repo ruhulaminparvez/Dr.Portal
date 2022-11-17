@@ -3,6 +3,7 @@ import img1 from '../../../Assets/images/people1.png';
 import img2 from '../../../Assets/images/people2.png';
 import img3 from '../../../Assets/images/people3.png';
 import TestimonialsCard from './TestimonialsCard';
+import quote from '../../../Assets/icons/quote.svg';
 
 const Testimonial = () => {
     const testimonialData = [
@@ -31,9 +32,16 @@ const Testimonial = () => {
 
     return (
         <div className='lg:px-52 mt-16'>
-            <h4 className="text-lg text-cyan-400 pb-2">Testimonial</h4>
-            <h1 className="text-5xl font-bold">What Our Patients Says!</h1>
-            <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 py-10'>
+            <div className='flex justify-between items-center'>
+                <div>
+                    <h4 className="text-lg text-cyan-400 pb-2">Testimonial</h4>
+                    <h1 className="text-5xl font-bold">What Our Patients Says!</h1>
+                </div>
+                <figure className='w-16 lg:w-24'>
+                    <img src={quote} alt="" />
+                </figure>
+            </div>
+            <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 py-16'>
                 {
                     testimonialData.map(testimonial => <TestimonialsCard key={testimonial.id} testimonial={testimonial}></TestimonialsCard>)
                 }

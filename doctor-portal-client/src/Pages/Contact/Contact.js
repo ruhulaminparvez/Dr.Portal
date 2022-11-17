@@ -12,24 +12,22 @@ const Contact = () => {
             <div className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Name</span>
+                  <span className="label-text">Email Address</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Enter your email address"
                   className="input input-bordered"
-                  required
                 />
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text">Subject</span>
                 </label>
                 <input
-                  type="email"
-                  placeholder="Enter your email"
+                  type="text"
+                  placeholder="Enter your subject"
                   className="input input-bordered"
-                  required
                 />
               </div>
               <div className="form-control">
@@ -40,7 +38,6 @@ const Contact = () => {
                   type="text"
                   placeholder="Enter your message"
                   className="textarea textarea-bordered"
-                  required
                 />
               </div>
               <div className="form-control mt-3">
