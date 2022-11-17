@@ -14,6 +14,16 @@ const BannerAppointment = ({selectedDate, setSelectedDate}) => {
                 mode="single"
                 selected={selectedDate}
                 onSelect={setSelectedDate}
+                modifiersClassNames={{
+                    selected: 'my-selected',
+                    today: 'my-today'
+                  }}
+                  modifiersStyles={{
+                    selected: {
+                        backgroundColor: '#057AFF',
+                        color: 'white'
+                    }
+                  }}
             />
           </div>
         </div>
