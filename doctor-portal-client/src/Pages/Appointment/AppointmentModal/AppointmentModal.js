@@ -43,11 +43,11 @@ const AppointmentModal = ({ treatment, selectedDate }) => {
                 <span className="label-text">Select Slot</span>
               </label>
                 <select  onBlur={onBlurHandle} name="slot" className="select select-ghost input-bordered w-full" required>
-                  <option selected>
+                  <option>
                     Pick the best time for you from available { slots && slots.length} slots
                   </option>
                   {
-                    slots && slots.map(slot => <option value={slot}>{slot}</option>)
+                    slots && slots.map((slot, i) => <option key={i} value={slot}>{slot}</option>)
                   }
                 </select>
             </div>
