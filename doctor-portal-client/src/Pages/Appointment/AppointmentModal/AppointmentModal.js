@@ -29,10 +29,10 @@ const AppointmentModal = ({ treatment, selectedDate }) => {
               </label>
                 <select name="slot" className="select select-ghost input-bordered w-full">
                   <option selected>
-                    Pick the best time for you from available slots
+                    Pick the best time for you from available { slots && slots.length} slots
                   </option>
                   {
-                    slots.map(slot => <option value={slot}>{slot}</option>)
+                    slots && slots.map(slot => <option value={slot}>{slot}</option>)
                   }
                 </select>
             </div>
