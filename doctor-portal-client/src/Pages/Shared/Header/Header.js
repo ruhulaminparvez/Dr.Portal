@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../Assets/logos/logo-2.png";
-// import logo2  from "../../../Assets/logos/logo-2.png";
+import { AuthContext } from './../../../contexts/AuthProvider';
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+
   const menuItems = (
     <React.Fragment>
       <li>
@@ -66,9 +68,16 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
+         {
+          user?.uid ? 
+          <Link to="/signout" className="btn btn-primary text-white">
+            SignOut
+          </Link>
+          : 
           <Link to="/login" className="btn btn-primary text-white">
             LogIn
           </Link>
+         }
         </div>
       </div>
     </div>
