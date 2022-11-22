@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Form, Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthProvider";
+
 
 const LogIn = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {signInUser} = useContext(AuthContext);
+  const [loginError, setLoginError] = useState("");
 
   const onSubmit = (data) => {
     console.log(data);
+    setLoginError("");
+
+    signInUser(data.email, data.password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(user);
+      if(user){
+        alert("Login Successful");
+        }
+      })
+    .catch((error) => {
+      console.log(error.message);
+      setLoginError(error.message);
+      });
   }
 
   return (
@@ -24,11 +42,16 @@ const LogIn = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("email")}
+                  {...register("email", 
+                  { 
+                    required: "**Email is Required", 
+                    pattern: { value: /^\S+@\S+$/i, message: "**Invalid Email" } 
+                  }
+                  )}
                   placeholder="Enter your email"
                   className="input input-bordered"
-                  required
                 />
+                {errors.email && <p className="text-red-700 mt-2">{errors.email?.message}</p>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -36,16 +59,24 @@ const LogIn = () => {
                 </label>
                 <input
                   type="password"
-                  {...register("password")}
+                  {...register("password", 
+                  { 
+                    required: "**Password is Required",
+                    minLength: { value: 6, message: "**Password must be at least 6 characters" },
+                    maxLength: { value: 15, message: "**Password must be at most 15 characters" },
+                    pattern: { value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/, message: "**Password must contain at least one letter and one number" }
+                  }
+                  )}
                   placeholder="Enter your password"
                   className="input input-bordered"
-                  required
                 />
+                {errors.password && <p className="text-red-700 mt-2">{errors.password?.message}</p>}
                 <label className="label text-center">
                   <Link to="/forget-password" className="label-text-alt link link-hover">
                   <p className="label-text-alt">Forgot Password?</p>
                   </Link>
                 </label>
+                {loginError && <p className="text-red-700 mt-2">{loginError}</p>}
               </div>
               <div className="form-control">
                 <button className="btn btn-primary">Login</button>
@@ -60,7 +91,7 @@ const LogIn = () => {
               </div>
               <div className="divider">OR</div>
               <div className="form-control">
-                <button className="btn btn-outline btn-primary">Login with Google</button>
+                <button className="btn btn-outline btn-primary">Continue with Google</button>
               </div>
             </div>
           </Form>
