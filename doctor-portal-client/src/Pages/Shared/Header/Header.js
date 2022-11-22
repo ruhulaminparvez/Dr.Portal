@@ -4,7 +4,14 @@ import logo from "../../../Assets/logos/logo-2.png";
 import { AuthContext } from './../../../contexts/AuthProvider';
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOutUser } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOutUser().then(() => {
+      console.log("User Log Out");
+      alert("User Log Out");
+    });
+  };
 
   const menuItems = (
     <React.Fragment>
@@ -69,14 +76,12 @@ const Header = () => {
         </div>
         <div className="navbar-end">
          {
-          user?.uid ? 
-          <Link to="/signout" className="btn btn-primary text-white">
-            SignOut
-          </Link>
+          user?.uid ?
+          <div>
+            <Link onClick={handleLogout} className="btn btn-primary text-white">SignOut</Link>
+          </div>
           : 
-          <Link to="/login" className="btn btn-primary text-white">
-            LogIn
-          </Link>
+          <Link to="/login" className="btn btn-primary text-white">LogIn</Link>
          }
         </div>
       </div>
