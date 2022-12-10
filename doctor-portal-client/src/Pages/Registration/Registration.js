@@ -26,11 +26,11 @@ const Registration = () => {
   }
 
   return (
-      <div className="hero min-h-screen py-10 bg-base-200">
-        <div className="hero-content flex-col">
-          <div className="text-center lg:text-left mb-5">
-            <h1 className="text-5xl font-bold">Registration now!</h1>
-          </div>
+    <div className="bg-base-200 py-16">
+      <div className="mb-6">
+        <h1 className="text-5xl text-center font-bold">Register Now!</h1>
+      </div>
+      <div className="hero">
           <Form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
             <div className="form-control">
@@ -98,8 +98,8 @@ const Registration = () => {
               </div>
             </div>
           </Form>
-        </div>
       </div>
+    </div>
   );
 };
 

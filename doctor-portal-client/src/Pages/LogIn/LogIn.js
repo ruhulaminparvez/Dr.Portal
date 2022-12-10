@@ -28,12 +28,11 @@ const LogIn = () => {
   }
 
   return (
-    <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col">
-          <div className="text-center lg:text-left mb-5">
-            <h1 className="text-5xl font-bold">Login now!</h1>
-          </div>
+    <div className="bg-base-200 py-16">
+      <div className="mb-6">
+            <h1 className="text-5xl text-center font-bold">Login now!</h1>
+      </div>
+      <div className="hero">
           <Form onSubmit={handleSubmit(onSubmit)} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
               <div className="form-control">
@@ -95,7 +94,6 @@ const LogIn = () => {
               </div>
             </div>
           </Form>
-        </div>
       </div>
     </div>
   );
