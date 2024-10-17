@@ -1,16 +1,15 @@
-## Doctors Portal Client
-Doctors Portal Client is a web application that allows doctors to manage their appointments. It is built using React, React Router, React Form Hook, Tailwind CSS, DaisyUI, Firebase Authentication, Firebase Hosting and more...
+# Project: Doctors Portal 🥼
 
+The **Doctors Portal** is a web application designed to help doctors manage their appointments and profiles. Built using **React**, **React Router**, **React Hook Form**, **Tailwind CSS**, **DaisyUI**, and hosted on **Firebase**, this app provides a seamless user experience for medical professionals.
 
-### Features
-- Doctors can see their appointments
-- Doctors can add new appointments
-- Doctors can edit appointments
-- Doctors can delete appointments
-- Doctors can see their profile
-- Doctors can update their profile
-- Doctors can change their password
-- Doctors can sign out
+## Key Features:
+- View upcoming and past appointments.
+- Add, edit, and delete appointments.
+- Access and update personal profile information.
+- Change password for account security.
+- Sign out securely.
+
+This portal offers an intuitive and efficient interface for doctors to manage their practice and patient schedules effectively.
 
 ### Live Site
 [Doctors Portal Client]()
